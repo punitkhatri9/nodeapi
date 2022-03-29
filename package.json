@@ -1,7 +1,7 @@
 {
-  "name": "restapi_youtube",
+  "name": "NodeApi",
   "version": "1.0.0",
-  "description": "Youtube Tutorial",
+  "description": "Rest Api",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",

@@ -13,7 +13,7 @@ router.post('/', SubmenuController.createNewSubmenu);
 router.get('/:id', SubmenuController.findSubmenuById);
 
 //Update a Submenu by id
-router.patch('/:id', SubmenuController.updateASubmenu);
+router.patch('/:id', SubmenuController.updateASubmenu)
 
 //Delete a Submenu by id
 router.delete('/:id', SubmenuController.deleteASubmenu);

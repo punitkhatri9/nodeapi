@@ -11,6 +11,9 @@ const SubmenuRoute = require('./Routes/Submenu.route');
 const MenuRoute = require('./Routes/Menu.route');
 const FooterRoute = require('./Routes/Footer.route');
 const MenuIconRoute = require('./Routes/MenuIcon.route');
+const Testimonial = require('./Routes/Testimonial.route');
+const HeroswithIcon = require('./Routes/HeroswithIcon.route');
+const CompareRoute = require('./Routes/Compare.route');
 const app = express();
 
 app.use(express.json());
@@ -28,8 +31,11 @@ app.use('/contact',ContactRoute);
 app.use('/contents',ContentsRoute);
 app.use('/submenu',SubmenuRoute);
 app.use('/menu',MenuRoute);
+app.use('/testimonial',Testimonial);
 app.use('/menuicon',MenuIconRoute);
 app.use('/footer',FooterRoute);
+app.use('/compare',CompareRoute);
+app.use('/heroswithicon',HeroswithIcon);
 //404 handler and pass to error handler
 
 
