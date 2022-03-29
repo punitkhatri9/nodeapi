@@ -16,11 +16,11 @@ module.exports = {
 
   createNewUser: async (req, res, next) => {
     try {
-      console.log('created user trigger');     
+      console.log('created user trigger');
       const NewUser = new User(req.body);
       const result = await NewUser.save();
       res.send(result);
-    } 
+    }
     catch (error) {
       console.log(error.message);
       if (error.name === 'ValidationError') {
@@ -52,12 +52,12 @@ module.exports = {
   findUserById: async (req, res, next) => {
     const id = req.params.id;
     try {
-      const User = await User.findById(id);
+      let UserById = await User.findById(id);
       // const User = await User.findOne({ _id: id });
-      if (!User) {
+      if (!UserById) {
         throw createError(404, 'User does not exist.');
       }
-      res.send(User);
+      res.send(UserById);
     } catch (error) {
       console.log(error.message);
       if (error instanceof mongoose.CastError) {
